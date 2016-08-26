@@ -16,8 +16,9 @@
     function imageCallback() {
         var scale = this.thing.width / this.width;
         console.log(this.thing.width, this.width);
-        var height = scale * this.height;
+        var height = parseInt(scale * this.height);
         this.thing_view.style.height = ""+ height + "px";
+        this.thing_view.style.backgroundSize = this.thing.width + "px " + height + "px";
     }
 
     function setImageHeight(thing_view, thing) {
@@ -63,12 +64,26 @@
 
     function loadThings(){
         var things = localStorage.getItem("things");
+        console.log(things);
         if( !things || things.length < 1){
-            things = [];
-            localStorage.setItem("things", things);
+            things = [
+                Thing("test", "http://cdn.tinybuddha.com/wp-content/uploads/2010/08/Happy.png", "description", "500"),
+                Thing("test2", "http://cdn.tinybuddha.com/wp-content/uploads/2010/08/Happy.png", "description1", "300"),
+                Thing("test3", "http://cdn.tinybuddha.com/wp-content/uploads/2010/08/Happy.png", "description2", "250"),
+                Thing("test4", "http://cdn.tinybuddha.com/wp-content/uploads/2010/08/Happy.png", "description3", "150"),
+                Thing("test5", "http://cdn.tinybuddha.com/wp-content/uploads/2010/08/Happy.png", "description4", "400")
+            ];
+            localStorage.setItem("things", JSON.stringify(things));
+        }
+        else{
+            things = JSON.parse(things);
         }
         addThingsToThingsView(things);
     }
 
-    addThing(Thing("test", "http://cdn.tinybuddha.com/wp-content/uploads/2010/08/Happy.png", "description", "500"));
+    function clearLocalStorage(){
+        localStorage.setItem("things", "");
+    }
+    clearLocalStorage();
+    loadThings();
 })();

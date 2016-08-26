@@ -7,9 +7,16 @@ body{
     background: red;
 }
 
+#app{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .thing{
-    display: table-cell;
-    vertical-align: bottom;
+    display: flex;
+    background-repeat: no-repeat;
+    margin: 10px;
 }
 
 .thing h2{
