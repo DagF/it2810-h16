@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
-    <title>Thing I'm grateful about in life</title>
+    <title>Things I'm grateful about in life</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <div>
+            <h1>Things I'm grateful about in life</h1>
+            <h2>Press "Add" to add something you are grateful about.</h2>
+            <h2>Double click a thing to remove it.</h2>
+            <button type="button" id="add-thing-button">Add thing</button>
+        </div>
+        <div id="add-thing-view" class="hidden">
+            <form id="add-thing-form">
+                <label>Name:<input type="text" id="add-thing-form-name"></label>
+                <label>Description:<input type="text" id="add-thing-form-description"></label>
+                <label>
+                    <select id="add-thing-form-width">
+                        <option value="200">Small</option>
+                        <option value="300">Medium</option>
+                        <option value="400">Large</option>
+                    </select>
+                </label>
+                <label>Image URL:<input type="text" id="add-thing-form-image-url"></label>
+                <input type="submit" value="Add"/>
+            </form>
+        </div>
+        <div id="things"></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

@@ -7,7 +7,15 @@ body{
     background: red;
 }
 
+html, body, #app{
+    height: 100%;
+}
+
 #app{
+    position: relative;
+}
+
+#things{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,10 +25,34 @@ body{
     display: flex;
     background-repeat: no-repeat;
     margin: 10px;
+    background: white;
 }
 
 .thing h2{
-    text-align: center;
+    margin:5px auto;
     color: white;
     text-shadow: 2px 2px black;
+}
+
+#add-thing-view{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    display: block;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#add-thing-form{
+    background: white;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+#add-thing-view.hidden{
+    display: none;
+    background: pink;
 }

@@ -12,8 +12,11 @@
 |Favicon|20min|Created a multi resolution one with GIMP following this guide: http://thenewcode.com/467/Creating-Multi-Resolution-Favicons-For-Web-Pages-With-GIMP|
 |Added functionality to add a image|50min|Had to go a bit fancy and let the user select sizes|
 |Added styling for multiple things|15min|Used flexbox to add styling to make multiple objects not look to bad|
+|Added functionality to add and remove a thing|95min|Added form to add thing you are grateful for and remove them with double click|
 
-## What part of the project was the moust time used on?
+## What part of the project was the most time used on?
+
+Adding functionality to add and remove things.
 
 ## Problems
 
