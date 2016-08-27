@@ -58,7 +58,7 @@
     }
 
     function createThingView(thing){
-        var thing_view = document.createElement("span");
+        var thing_view = document.createElement("div");
         thing_view.className = "thing";
         var backgroundImage = "url('" + thing.img + "')";
         thing_view.style.backgroundImage = backgroundImage;
