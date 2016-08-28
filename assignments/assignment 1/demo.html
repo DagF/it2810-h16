@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="img/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
+    <title>Things I'm grateful about in life</title>
+</head>
+<body>
+<div id="app">
+    <div>
+        <h1>Things I'm grateful about in life</h1>
+        <h2>Press "Add" to add something you are grateful about.</h2>
+        <h2>Double click a thing to remove it.</h2>
+        <button type="button" id="add-thing-button">Add thing</button>
+    </div>
+    <div id="add-thing-view" class="hidden">
+        <form id="add-thing-form">
+            <label>Name:<input type="text" id="add-thing-form-name"></label>
+            <label>Description:<input type="text" id="add-thing-form-description"></label>
+            <label>
+                <select id="add-thing-form-width">
+                    <option value="200">Small</option>
+                    <option value="300">Medium</option>
+                    <option value="400">Large</option>
+                </select>
+            </label>
+            <label>Image URL:<input type="text" id="add-thing-form-image-url"></label>
+            <input type="submit" value="Add"/>
+        </form>
+    </div>
+    <div id="things"></div>
+</div>
+<script>
+    localStorage.setItem("things", JSON.stringify(
+            [
+                {
+                    name: "Friends",
+                    img: "https://static.pexels.com/photos/23591/woman-street-friends-fun-23591-large.jpg",
+                    description: "Good friends make the good events better and the sad less so.",
+                    width: "400"
+                },
+                {
+                    name: "Pets",
+                    img: "https://static.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317-large.jpeg",
+                    description: "A pet will always you for you.",
+                    width: "300"
+                },
+                {
+                    name: "Clean Water",
+                    img: "https://static.pexels.com/photos/66346/pexels-photo-66346-large.jpeg",
+                    description: "Many people on earth lack access to clean water.",
+                    width: "200"
+                },
+                {
+                    name: "Education",
+                    img: "https://static.pexels.com/photos/2757/books-magazines-building-school-large.jpg",
+                    description: "Education not only improves your life but the life of those around you.",
+                    width: "400"
+                }
+            ]
+    ));
+</script>
+<script src="main.js"></script>
+</body>
+</html>
